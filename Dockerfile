@@ -5,4 +5,4 @@ WORKDIR /opt/dot/
 RUN pip install -r requirements.txt
 COPY . /opt/dot/
 EXPOSE 8000
-CMD ./manage.py runserver 0.0.0.0:8000
+CMD ./manage.py runserver 0.0.0.0doc:8000

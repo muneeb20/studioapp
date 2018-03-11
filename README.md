@@ -17,4 +17,11 @@ Things can be improved are
 
 You need to have docker installed on your machine
 
-## running on local commands
+## run following commands in root of project
+
+docker build .
+
+muneeb$ docker run -it -p 8001:8000 -t proj:studio
+
+open browser http://127.0.0.1:8001/
+
