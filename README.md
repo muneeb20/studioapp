@@ -27,7 +27,15 @@ You need to have docker installed on your machine
 
 docker build .
 
-muneeb$ docker run -it -p 8001:8000 -t proj:studio
+docker run -it -p 8001:8000 -t proj:studio
 
 open browser http://127.0.0.1:8001/
+
+## check admin to see booking
+
+http://127.0.0.1:8001/admin
+
+credentials in email
+
+
 
