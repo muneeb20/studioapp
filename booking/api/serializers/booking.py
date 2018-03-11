@@ -24,7 +24,7 @@ class BookingSerializer(serializers.ModelSerializer):
         :return booking object:
         """
         client_data = self.initial_data.get('client')
-        client_instance, created = ClientSerializer.Meta.model.objects.get_or_create(email=client_data.get('email'))
+        client_instance = ClientSerializer.Meta.model.get_or_create_client(client_data)
         validated_data.update({'client': client_instance, 'room_id': self.room_id})
         return Booking.objects.create(**validated_data)
 

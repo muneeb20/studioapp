@@ -27,3 +27,10 @@ class Client(DatedModel):
             return cls.objects.get(email=email)
         except cls.DoesNotExist as e:
             return None
+
+    @classmethod
+    def get_or_create_client(cls, client_data):
+        client = cls.get_or_return_none(client_data.get('email'))
+        if client is None:
+            client, created = cls.objects.get_or_create(**client_data)
+        return client
